@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script> 
+    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
+    <script>
+      function getImgData(chartContainer) {
+        var chartArea = chartContainer.getElementsByTagName('svg')[0].parentNode;
+        var svg = chartArea.innerHTML;
+        var doc = chartContainer.ownerDocument;
+        var canvas = doc.createElement('canvas');
+        canvas.setAttribute('width', chartArea.offsetWidth);
+        canvas.setAttribute('height', chartArea.offsetHeight);
+        
+        canvas.setAttribute(
+            'style',
+            'position: absolute; ' +
+            'top: ' + (-chartArea.offsetHeight * 2) + 'px;' +
+            'left: ' + (-chartArea.offsetWidth * 2) + 'px;');
+        doc.body.appendChild(canvas);
+        canvg(canvas, svg);
+        var imgData = canvas.toDataURL("image/png");
+        canvas.parentNode.removeChild(canvas);
+        return imgData;
+      }
+      
+      function saveAsImg(chartContainer) {
+        var imgData = getImgData(chartContainer);
+        
+        // Replacing the mime-type will force the browser to trigger a download
+        // rather than displaying the image in the browser window.
+        window.location = imgData.replace("image/png", "image/octet-stream");
+      }
+      
+      function toImg(chartContainer, imgContainer) { 
+        var doc = chartContainer.ownerDocument;
+        var img = doc.createElement('img');
+        img.src = getImgData(chartContainer);
+        
+        while (imgContainer.firstChild) {
+          imgContainer.removeChild(imgContainer.firstChild);
+        }
+        imgContainer.appendChild(img);
+      }
+    </script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart", "treemap", "geochart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        // Citations  old award
+        data = new google.visualization.DataTable();
+        data.addColumn('string', 'Year');
+        data.addColumn('number', 'MEME');
+        data.addColumn('number', 'Continuity');
+        data.addColumn('number', 'MGLTools/Autodock');
+        data.addColumn('number', 'APBS');
+        data.addRows([
+            ["2003",  61, 24, 126,  13],
+            ["2004",  91, 25, 206,  30],
+            ["2005", 101, 34, 347,  79],
+            ["2006", 148, 24, 390, 140],
+            ["2007", 179, 36, 404, 168],
+            ["2008", 181, 34, 432, 220],
+            ["2009", 238, 28, 455, 256],
+        ]);
+
+        var options = {
+            pointSize: 3, 
+            width: 500, 
+            height: 400, 
+            title: 'Citations according to Scopus',
+            legend: {position: 'right', textStyle: {color: 'black', fontSize: 11}},
+            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
+            vAxis: {title: 'Number of Citations', textStyle: {color: 'black', fontSize: 11}},
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('citations1_div'));
+        chart.draw(data, options);
+        
+        // Citations current award
+        data = new google.visualization.DataTable();
+        data.addColumn('string', 'Year');
+        data.addColumn('number', 'MEME');
+        data.addColumn('number', 'Continuity');
+        data.addColumn('number', 'MGLTools/Autodock');
+        data.addColumn('number', 'APBS');
+        data.addRows([
+            ["2010", 298, 29, 487, 295],
+            ["2011", 335, 26, 482, 337],
+            ["2012", 445, 29, 530, 339],
+            ["2013",   0,   0,   0,  0,  ],
+        ]);
+
+        var options = {
+            pointSize: 3, 
+            width: 500, 
+            height: 400, 
+            title: 'Citations according to Scopus',
+            legend: {position: 'right', textStyle: {color: 'black', fontSize: 11}},
+            hAxis: {title: 'Year', textStyle: {color: 'black', fontSize: 11}},
+            vAxis: {title: 'Number of Citations', textStyle: {color: 'black', fontSize: 11}},
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('citations2_div'));
+        chart.draw(data, options);
+        
+      }
+    </script>
+
+  </head>
+  <body>
+     <h3 align="center">Citations summary</h3>
+
+    <div id="img_div" style="position: fixed; top: 75; left: 550; z-index: 10; border: 1px solid #b9b9b9">
+      Image will be placed here
+    </div>
+
+    <div id="citations1_div" style="width: 500px; height: 400px"></div>
+    <button style="position:Absolute; left:150" onclick="saveAsImg(document.getElementById('citations1_div'));">Save as PNG Image</button>
+    <button style="position:relative; left:300" onclick="toImg(document.getElementById('citations1_div'), document.getElementById('img_div'));">Convert to image</button>
+    
+    <div id="citations2_div" style="width: 500px; height: 400px"></div>
+    <button style="position:Absolute; left:150" onclick="saveAsImg(document.getElementById('citations2_div'));">Save as PNG Image</button>
+    <button style="position:relative; left:300" onclick="toImg(document.getElementById('citations2_div'), document.getElementById('img_div'));">Convert to image</button>
+    
+</body>
+</html>

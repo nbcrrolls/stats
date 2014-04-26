@@ -1,7 +1,5 @@
 #!/bin/bash 
 
-# Dumps opal jobs info for a given period
-
 if [ $# -eq 1 ]; then
     # dump for a year
     LENGTH=year

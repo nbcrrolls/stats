@@ -8,8 +8,8 @@
 # Creates key occurence count 
 # writes output file with resulting counts in the format used by the 
 # google.visualization.GeoChart():  ["Name", count],
-# If -format=none is given on the command line a simpel format is used:
-#     name count
+# or simple key value pair
+# 
 
 import urllib2
 import json
@@ -31,7 +31,7 @@ class Count:
         self.input = self.args[0]                     # input file 
         self.output = self.args[1]                    # output file 
 
-        self.format = "        [\"%s\", %d],\n"           # output format for key occurence count
+        self.format = "        [\"%s\", %d],\n"       # output format for key occurence count
         if len(self.args) == 3:
             str =  self.args[2]
             if str.lower().index('none'):
@@ -79,10 +79,36 @@ class Count:
 
     def getCount(self):
         """ sum occurences counts  """
+        # map for naming web services 
+        map = { "apbs_parallel":"apbs",
+                "smileypng":"smiley2png",
+                "SMAPDBSearch":"SMAP",
+                "SMAPPairComp":"SMAP",
+                "CENTRIMO":"meme",
+                "DREME":"meme",
+                "FIMO":"meme",
+                "GLAM":"meme",
+                "GLAMSCAN":"meme",
+                "GOMO":"meme",
+                "MAST":"meme",
+                "MCAST":"meme",
+                "MEME":"meme",
+                "MEMECHIP":"meme",
+                "SPAMO":"meme",
+                "TOMTOM":"meme",
+              }
         self.readFile()
         data = {}
         for l in self.lines:
-            code, count = l.split()
+            temp, count = l.split()
+            # remove version numbers like _1.22.333  from key name 
+            temp = temp.translate(None, ".1234567890")
+            if temp[-1] == "_":
+		temp = temp[:-1]
+            if map.has_key(temp):
+                code = map[temp]
+            else:
+                code = temp
             if data.has_key(code):
                 data[code] += int(count)
             else: 

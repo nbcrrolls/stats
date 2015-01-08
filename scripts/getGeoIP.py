@@ -25,6 +25,7 @@ class MapIP:
     def setDefaults(self):
         """ set default class attributes"""
         self.service = "http://freegeoip.net/json/%s" #  use json service
+        self.service = "http://www.telize.com/geoip/%s" #  use json service
         #self.service = "http://smart-ip.net/geoip-json/%s" # usejson service
         self.region = []                              # count of occurences by country
         self.regionUS = []                            # count of occurences by US state
@@ -91,7 +92,7 @@ class MapIP:
         for i in self.lines:
             ip = i[:-1]
             try:
-                print ip
+                #DEBUG print ip
                 loc = json.load(urllib2.urlopen(self.service % ip, timeout=300))
                 # the info back is in the format 
                 # {u'city': u'Little Rock', u'region_code': u'AR', u'region_name': u'Arkansas', 
@@ -102,17 +103,31 @@ class MapIP:
                 #print error.read()
                 continue
             except socket.timeout, error:
-                print "socket timeout"
-    	        dataTimeout += "%s\n" % ip   
+                print "%s socket timeout" % ip
+                dataTimeout += "%s\n" % ip
+                continue
+            except UnicodeDecodeError, error:
+                print "%s not UTF8 " % ip
+                dataTimeout += "%s not UTF8\n" % ip
                 continue
 
-            country = loc['country_code'].encode('ascii', 'ignore')
+            try:
+                country = loc['country_code'].encode('ascii', 'ignore')
+            except KeyError, error:
+                print "%s no country code" % ip
+                dataTimeout += "%s no country code\n" % ip
+                continue
+
             if len(country):
                 data.append(country)             # list of countries
             if country == "US": 
-                state = loc['region_code'].encode('ascii', 'ignore')
-                if len(state):
-    	            dataUS.append(state)         # list of states
+                try:
+                    state = loc['region_code'].encode('ascii', 'ignore')
+                    if len(state):
+                        dataUS.append(state)         # list of states
+                except:
+                    print "%s no state info" % ip
+                    dataTimeout += "%s no state info\n" % ip
 
         self.region = self.occurence(data)       # find occurence number by country
         self.regionUS = self.occurence(dataUS)   # find occurence number by US state

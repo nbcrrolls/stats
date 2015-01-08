@@ -1,0 +1,59 @@
+2014
+
+Raw counts received from J. Van Dorn.
+Total Registered Users: 1330 
+Run combineGeoCount.py on raw domain counts (change entries with < 10 to "other")
+
+domain counts:
+
+edu 843
+com 243
+uk  28
+other   22
+de  16
+cn  14
+it  13
+gov 12
+au  11
+ca  9
+net 8
+fr  8
+ch  6
+za  6
+jp  6
+nl  5
+tw  5
+pl  5
+org 5
+kr  5
+gr  4
+tr  4
+hk  4
+sg  4
+co  3
+es  3
+ru  3
+ir  3
+br  3
+yu  3
+il  3
+in  2
+be  2
+ro  2
+ee  1
+vn  1
+cn  1
+at  1
+et  1
+mil 1
+pt  1
+no  1
+nz  1
+th  1
+pe  1
+dk  1
+hr  1
+ws  1
+eud 1
+mx  1
+se  1

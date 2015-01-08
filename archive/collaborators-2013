@@ -1,0 +1,17 @@
+// Data for collaborators.html as of 2013
+
+        // Collaborators: US geographical distribution 
+        data1.addRows([
+        ["WA", 4], ["DC", 1], ["WI", 1], ["WV", 1], ["FL", 1],
+        ["NJ", 1], ["TX", 5], ["LA", 2], ["NC", 2], ["NY", 3],
+        ["PA", 1], ["VA", 1], ["CA", 21], ["AL", 2], ["IL", 2],
+        ["GA", 2], ["ID", 1], ["CT", 1], ["MA", 4], ["OH", 1],
+        ["UT", 4], ["MO", 3], ["MN", 3], ["OR", 1],
+        ]);
+
+        // Collaborators: World geographical distribution 
+        data2.addRows([
+        ["Canada", 2], ["Netherlands", 1], ["Italy", 1], ["Ireland", 1],
+        ["Poland", 1], ["Scotland", 2], ["Luxembourg", 1], ["UK", 3],
+        ["New", 1], ["Taiwan", 1], ["Spain", 1], ["US", 68],
+        ]);

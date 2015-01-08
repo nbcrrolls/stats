@@ -1,0 +1,87 @@
+2014
+
+Raw counts received from T. Bailey.
+Unique users: 19195
+Run combineGeoCount.py on raw counts (change entries with < 1000 to "other")
+
+raw counts :
+
+com 120607
+net 68463
+edu 29455
+de 8642
+uk 8452
+fr 5880
+jp 5619
+cn 3722
+ca 2978
+org 2965
+au 1935
+es 1804
+ch 1761
+in 1616
+it 1599
+nl 1542
+ru 1502
+gov 1461
+mx 1103
+be 1091
+il 1083
+dk 902
+se 896
+sg 751
+kr 665
+eu 656
+pl 655
+cl 504
+ie 469
+tw 464
+fi 458
+br 448
+pt 434
+at 421
+ar 398
+ee 277
+nz 264
+gr 235
+hk 228
+za 226
+lu 144
+no 140
+cz 127
+si 100
+tr 98
+co 79
+my 64
+sa 60
+ir 55
+hu 39
+bg 36
+cat 34
+ua 28
+me 23
+biz 22
+bd 19
+sk 14
+uy 12
+pk 12
+ac 11
+mo 9
+by 8
+us 7
+rs 7
+cc 7
+hr 6
+bw 6
+th 5
+lt 5
+is 5
+vn 3
+info 2
+pe 1
+nu 1
+cu 1
+cm 1
+ba 1
+ae 1
+ 

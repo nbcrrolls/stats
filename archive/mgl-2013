@@ -1,0 +1,56 @@
+// Data for mgl.html through 2013
+
+        // registered users 
+        data1.addRows([
+            ["2006", 86, 86, '86'],
+            ["2007", 1366, 1366, '1366'],
+            ["2008", 3151, 3151, '3151'],
+            ["2009", 5512, 5512, '5512'],
+
+            // old from excel file and last report.
+            // ["2010", 8115, 8115, '8115'],
+            // ["2011", 10914, 10914, '10914'],
+            // ["2012", 13192, 13192, '13192'],
+            // ["2013", 18567, 18567, '18567'],
+
+            // verified by Sargis on Jan 16, 2013
+            ["2010", 8239, 8239, '8239'],
+            ["2011", 10910, 10910, '10910'],
+            ["2012", 14150, 14150, '14150'],
+            ["2013", 18441, 18441, '18441'],
+        ]);
+
+        // Website visits geolocation
+        data2.addRows([
+            ["United States",16721], ["India",12630], ["China",7182], ["United Kingdom",2524], ["Japan",2512],
+            ["Germany",2440], ["Brazil",2362], ["Italy",1815], ["Mexico",1701], ["Canada",1517],
+            ["France",1511], ["Iran",1456], ["Spain",1218], ["South Korea",1170], ["Poland",1095],
+            ["Australia",967], ["Turkey",927], ["Taiwan",889], ["Malaysia",863], ["Pakistan",820],
+            ["Russia",707], ["Portugal",647], ["(not set)",640], ["Thailand",634], ["Indonesia",627],
+            ["Chile",616], ["Colombia",546], ["Singapore",529], ["Switzerland",509], ["Sweden",480],
+            ["Netherlands",462], ["Argentina",450], ["Belgium",394], ["Egypt",355], ["Hong Kong",316],
+            ["Czech Republic",314], ["Ukraine",288], ["Austria",282], ["Algeria",271], ["South Africa",255],
+            ["Israel",247], ["Vietnam",247], ["Greece",218], ["Serbia",214], ["Bangladesh",207],
+            ["Hungary",206], ["Ireland",202], ["Denmark",194], ["Morocco",189], ["Finland",186],
+            ["Philippines",163], ["Saudi Arabia",151], ["Peru",149], ["Romania",135], ["Slovenia",120],
+            ["Norway",108], ["Puerto Rico",91], ["United Arab Emirates",90], ["Sri Lanka",86], ["Venezuela",81],
+            ["Kenya",73], ["Croatia",71], ["Armenia",69], ["Nigeria",67], ["New Zealand",66],
+            ["Belarus",65], ["Jordan",64], ["Tunisia",64], ["Bulgaria",63], ["Iraq",63],
+            ["Sudan",62], ["Guatemala",53], ["Estonia",42], ["Macau",40], ["Lithuania",38],
+            ["Mongolia",38], ["Slovakia",38], ["Cuba",37], ["Cyprus",37], ["Latvia",32],
+            ["Ecuador",30], ["Lebanon",29], ["Uzbekistan",28], ["Azerbaijan",27], ["Ghana",25],
+            ["Senegal",23], ["Uruguay",23], ["Luxembourg",21], ["Cameroon",20], ["Costa Rica",17],
+            ["Palestine",17], ["Libya",15], ["Qatar",15], ["Syria",15], ["Georgia",13],
+            ["Moldova",13], ["Kazakhstan",11], ["Nepal",11], ["Dominican Republic",10], ["Bolivia",9],
+            ["Ethiopia",9], ["Iceland",9], ["Malta",8], ["Macedonia (FYROM)",7], ["Albania",6],
+            ["Saint Lucia",6], ["Oman",6], ["Côte d’Ivoire",5], ["Paraguay",5], ["St. Vincent & Grenadines",5],
+            ["Kosovo",5], ["Barbados",4], ["Bahrain",4], ["Kyrgyzstan",4], ["North Korea",4],
+            ["Mauritius",4], ["Panama",4], ["Bosnia and Herzegovina",3], ["French Guiana",3], ["Kuwait",3],
+            ["Laos",3], ["Rwanda",3], ["Trinidad and Tobago",3], ["Brunei",2], ["Fiji",2],
+            ["Honduras",2], ["Jamaica",2], ["Martinique",2], ["Maldives",2], ["Nicaragua",2],
+            ["Réunion",2], ["Tanzania",2], ["Uganda",2], ["Afghanistan",1], ["Angola",1],
+            ["Burkina Faso",1], ["Bermuda",1], ["Botswana",1], ["Faroe Islands",1], ["Gibraltar",1],
+            ["Guam",1], ["Cambodia",1], ["Montenegro",1], ["Madagascar",1], ["Mali",1],
+            ["Montserrat",1], ["Namibia",1], ["El Salvador",1], ["Swaziland",1], ["Turks and Caicos Islands",1],
+            ["Yemen",1], ["Zimbabwe",1], 
+        ]);

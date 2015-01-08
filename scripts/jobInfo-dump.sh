@@ -23,7 +23,7 @@ fi
 # db access
 USER=opal
 DB=opaldb
-PASS=PUT-PASS-HERE
+PASS=PUT-OPAL-PASS-HERE
 
 SQL="/usr/bin/mysql $DB -u $USER --password=$PASS"
 

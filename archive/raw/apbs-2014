@@ -1,0 +1,10 @@
+
+2014
+
+Raw counts received from Liz Jurrus, Nathan Baker.
+	registered users: 21360
+	apbs locations (counts for www.poissonboltzmann.org) in apbs-location-2014.xlsz
+
+extract raw counts (first 2 columns) from xlsz file.
+Run combineGeoCount.py on raw counts to create input for apbs.html
+

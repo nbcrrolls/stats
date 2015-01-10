@@ -1,0 +1,10 @@
+
+2014
+
+Raw counts received from Liz Jurrus, Nathan Baker.
+	registered users: 9232
+	pdb2pqr locations (counts for www.poissonboltzmann.org) in pdb2pqr-location-2014.xlsx
+
+extract raw counts (first 2 columns) from xlsx file.
+Run combineGeoCount.py on raw counts to create input for pdb2pqr.html
+

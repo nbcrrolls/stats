@@ -1,0 +1,11 @@
+// Data for resource_summary.html
+
+        // Resource summary  by year
+        // Data columns are: Year, Publications, Subprojects, Investigators, States, Countries
+        data.addRows([
+            ["2011",  74,  55, 129, 22,  9],
+            ["2012",  85,  63, 132, 22, 11],
+            ["2013",  22,   0,   0, 24, 12],
+            ["2014",   0,  26, 130, 23, 13],
+        ]);
+

@@ -1,0 +1,18 @@
+// Data for citations.html
+
+Changed 2011+ years counts for MEME to provided by T.Baily, counts per Google Scholar
+Remove stats for Continuity citations. Tracking is not used by Continuity team. 
+Columsn for data1 are Year, MEME, (Continuity), MGLTools/Autodock, APBS
+REmove Continuity column from all on website
+
+        // citations count per Scopus
+        data1.addRows([
+        ]);
+
+        data1.addRows([
+            ["2011", 817, 26, 482, 337],
+            ["2012", 1043, 29, 530, 339],
+            ["2013", 1259,  0, 831, 470],
+            ["2014", 1314,  0, 965, 491],
+		]);
+

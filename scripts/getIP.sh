@@ -27,7 +27,7 @@ TEMP=ips-$YEAR-$MONTH.temp
 touch $TEMP
 for i in $files
 do
-    grep POST $i | awk '{print $1}' | sort | uniq >> $TEMP
+	grep POST $i | grep 'meme\|pdb2pqr\|autoclickchem\|opal2' | awk '{print $1}' | sort | uniq >> $TEMP
 done
 
 sort $TEMP | uniq > $OUT

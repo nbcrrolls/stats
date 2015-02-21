@@ -12,6 +12,7 @@ Move to repo website (graphene-nbcr/stats/)
 
 scripts
 --------
+Move all scripts to opal roll
 Scripts to aid NBCR stats collection.
 
 * jobInfo-dump.sh - Dump opal jobs info into a file opaldb-DATE.out 

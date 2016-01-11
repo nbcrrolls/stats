@@ -1,0 +1,59 @@
+2015 
+
+Raw counts received from Jeff Van Dorn.
+
+Total registered user count 1390.
+Run combineGeoCount.py on raw domain counts (change entries with < 10 to "other")
+
+The following is the domain distribution for all registered users:
+edu 891
+com 251
+uk 29
+de 17
+cn 16
+it 16
+gov 13
+other 12
+au 11
+ca 9
+fr 9
+net 8
+ch 6
+jp 6
+za 6
+nl 5
+tw 5
+pl 5
+hk 5
+org 5
+kr 5
+gr 4
+tr 4
+sg 4
+il 4
+co 3
+ir 3
+es 3
+ru 3
+br 3
+yu 3
+in 3
+vn 2
+no 2
+be 2
+ro 2
+ee 1
+cn 1
+at 1
+et 1
+mil 1
+pt 1
+nz 1
+th 1
+pe 1
+dk 1
+hr 1
+ws 1
+eud 1
+mx 1
+se 1

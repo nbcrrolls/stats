@@ -1,0 +1,26 @@
+
+2015
+
+Raw counts received from Nathan Baker.
+        registered users: apbs-pdb2pqr-users.zip
+		pdb2pqr locations: pdb2pqr-location-2014.xlsx
+
+# to get users counts
+unzip apbs-pdb2pqr-users.zip
+countAPBS=`cat cat users.csv  | awk -F, '{print $7}' | grep True | wc -l`
+countPDB2PQR=`cat cat users.csv  | awk -F, '{print $8}' | grep True | wc -l`
+
+echo "apbs count = $countAPBS"  # results in 565
+echo "pdb2pr counbt = $countPDB2PQR" # results in 472
+rm users.csv
+
+
+# to get geo locations 
+Extract fist 2 columsn from pdb2pqr-location-2015.xlsx and save as pdb2pqr-location-2015.txt
+Convert all ^M characters to returns.
+Change all split names to use "-"
+
+combineGeoCount.py  pdb2pqr-location-2015.txt myfile
+
+change all "-" back to space in myfile. 
+Use myfile as input for pdb2pqr.html

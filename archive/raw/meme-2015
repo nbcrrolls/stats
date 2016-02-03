@@ -1,0 +1,22 @@
+
+2015
+
+Per email form T.Bailey, Jan 20, 2016:
+
+  During 2015 we switched from recording user emails to recording a unique
+  browser session ID in the MEME Suite log files.  This was required by the
+  journal NAR, which insisted that on-line tools not require a user to input
+  their email address.  As a result, the user ids in the log files for 2015
+  are a mix of email addresses and made-up ids.  
+
+  So we can't actually count unique users for 2015 (or later).  I am
+  sending you a file containing all the user ids from all jobs in the
+  period Jan-May 2015, but the analysis you require would be a bit
+  fiddly, and sometimes two or more ids would really be the same user
+  since every user gets a new "id" every time they initiate a new browser
+  session.
+
+The file with ids/email: meme-jan-may-2015-user-ids.txt
+
+cat meme-jan-may-2015-user-ids.txt  | sort | uniq > meme-count
+wc -l meme-count # output is 10228

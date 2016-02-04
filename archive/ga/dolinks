@@ -1,0 +1,12 @@
+#!/bin/bash
+
+year=2015
+names="website-location website-overview wiki-location wiki-overview"
+ext=".pdf"
+
+for a in $names; do
+    if [ -f ga-$a$ext  ]; then
+        rm -rf ga-$a$ext 
+    fi
+    ln -s $year/$a-$year$ext ga-$a$ext
+done 

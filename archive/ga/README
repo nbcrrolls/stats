@@ -1,6 +1,9 @@
-GA stats were started on webpage and wiki on December 17, 2013
+GoogleAnalytics stats were started on webpage and wiki on December 17, 2013
 
 *2013.pdf - stats for 2013 using old server links. The reports show
             through 2014-04-27 (RAC meeting). Actual data through december.
 *2014.pdf - stats for 2014
+*2015.pdf - stats for 2015
 
+Put pdf files in reports/<year> on a web server
+Run dolinks script to make correct links for the year

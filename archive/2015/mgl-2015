@@ -1,0 +1,45 @@
+From: Michel Sanner <sanner@scripps.edu>
+Subject: stats
+Date: February 3, 2016 at 5:26:48 PM PST
+To: Nadya Williams <nwilliams@ucsd.edu>
+Cc: Michel Sanner <sanner@scripps.edu>
+
+Nadya
+
+I went to the data base and performed the following queries
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2006*' and TimeStamp < '2007*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2007*' and TimeStamp < '2008*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2008*' and TimeStamp < '2009*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2009*' and TimeStamp < '2010*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2010*' and TimeStamp < '2011*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2011*' and TimeStamp < '2012*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2012*' and TimeStamp < '2013*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2013*' and TimeStamp < '2014*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2014*' and TimeStamp < '2015*' and Institution != 'TSRI' LIMIT 0, 100000;
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2015*' and TimeStamp < '2016*' and Institution != 'TSRI' LIMIT 0, 100000;
+
+to get the number of registrations from unique users (per year and not at TSRI) for each year since we started the registration process
+
+2006 113
+2007 1237
+2008 1775
+2009 2091
+2010 1917
+2011 2311
+2012 2760
+2013 3418
+2014 1643
+2015 1718
+
+SUM 18934
+
+Total registered unique user are: 17684 This number is smaller because a user user might have registered in multiple years adding to the count for each year but adding only 1 to the count over multiple years
+
+SELECT DISTINCT LastName, FirstName, InstitutionType, Institution, Position FROM `Users`.`Required` where TimeStamp >= '2006*' and TimeStamp < '2016*' and Institution != 'TSRI' LIMIT 0, 100000;
+
+I think these number are a better refection of the reality.
+
+Looking at google now for geographic distribution
+
+-- 
+
